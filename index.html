@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CHRONO | Stopwatch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-circle circle-one"></div>
+    <div class="background-circle circle-two"></div>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="brand">
+                <div class="brand-icon">C</div>
+
+                <div>
+                    <h1>CHRONO</h1>
+                    <p>PRECISION TIMER</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span id="statusText">READY</span>
+            </div>
+
+        </header>
+
+
+        <!-- STOPWATCH -->
+        <section class="stopwatch-card">
+
+            <div class="timer-ring">
+
+                <div class="ring-progress"></div>
+
+                <div class="timer-content">
+
+                    <span class="timer-label">
+                        ELAPSED TIME
+                    </span>
+
+                    <div class="time" id="display">
+                        00:00:00.00
+                    </div>
+
+                    <span class="timer-hint">
+                        HOURS &nbsp; MINUTES &nbsp; SECONDS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+            <div class="controls">
+
+                <button
+                    class="control-btn secondary"
+                    id="resetBtn"
+                    title="Reset stopwatch"
+                >
+                    ↻
+                </button>
+
+                <button
+                    class="control-btn main"
+                    id="startBtn"
+                >
+                    <span id="startIcon">▶</span>
+                    <span id="startText">START</span>
+                </button>
+
+                <button
+                    class="control-btn secondary"
+                    id="lapBtn"
+                    title="Record lap"
+                >
+                    ◷
+                </button>
+
+            </div>
+
+            <div class="keyboard-info">
+                SPACE &nbsp; START / PAUSE
+                <span>•</span>
+                L &nbsp; LAP
+                <span>•</span>
+                R &nbsp; RESET
+            </div>
+
+        </section>
+
+
+        <!-- LAP SECTION -->
+        <section class="laps-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">TIME RECORDS</span>
+                    <h2>Lap History</h2>
+                </div>
+
+                <div class="lap-count">
+                    <span id="lapCount">0</span>
+                    LAPS
+                </div>
+
+            </div>
+
+
+            <div class="laps-container" id="lapsContainer">
+
+                <div class="empty-state" id="emptyState">
+
+                    <div class="empty-icon">
+                        ◷
+                    </div>
+
+                    <h3>No laps recorded</h3>
+
+                    <p>
+                        Start the stopwatch and press the lap
+                        button to record intervals.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <span>CHRONO SYSTEM</span>
+            <span>MEASURE EVERY MOMENT</span>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
